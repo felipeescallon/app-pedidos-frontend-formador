@@ -70,6 +70,16 @@ export class SeguridadService {
     return datosString;
   }
 
+  ObtenerToken(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return '';
+    }
+  }
+
 
 
 
